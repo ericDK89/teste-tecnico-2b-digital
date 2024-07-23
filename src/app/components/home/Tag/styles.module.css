@@ -1,0 +1,19 @@
+.container {
+    width: fit-content;
+    padding: 0.25rem 0.5rem;
+    display: flex;
+    align-items: center;
+    background-color: var(--azul-universe-dark);
+    border-radius: 2px;
+}
+
+.container p {
+    font-size: var(--unnamed-font-size-10);
+    line-height: var(--unnamed-line-spacing-12);
+    color: var(--rosa-2b-lightest);
+    text-transform: var(--unnamed-text-transform-uppercase);
+}
+
+.container[data-isOffer] {
+    background-color: var(--rosa-2b-dark);
+}
