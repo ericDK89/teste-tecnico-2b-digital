@@ -4,6 +4,29 @@
     flex-direction: column;
     color: var(--rosa-2b-medium);
     background-color: var(--azul-universe-darkest);
+
+    @media(min-width: 414px) and (max-width: 600px) {
+        .hamburger {
+            display: block;
+        }
+
+        .list {
+            flex-direction: column;
+            position: absolute;
+            top: 50px;
+            right: 0;
+            background-color: white;
+            width: 200px;
+            height: 0;
+            overflow: hidden;
+            transition: height 0.3s ease;
+            z-index: 1;
+        }
+
+        .list.open {
+            height: auto;
+        }
+    }
 }
 
 .free-shipping-bar {
@@ -25,6 +48,23 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 2;
+}
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    margin: 5px 0;
+    background-color: var(--unnamed-color-000000);
+    transition: all 0.3s ease;
 }
 
 .list {

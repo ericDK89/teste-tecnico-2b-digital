@@ -1,6 +1,8 @@
+'use client';
+
 import Image from 'next/image';
 import Link from 'next/link';
-import {JSX} from 'react';
+import {JSX, useState} from 'react';
 import Circle from '../../home/Circle';
 import styles from './styles.module.css';
 
@@ -10,6 +12,12 @@ import styles from './styles.module.css';
  * @return {JSX.Element} JSX element representing the header.
  */
 export default function Header(): JSX.Element {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const handleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <header className={styles.container}>
       <div className={styles['free-shipping-bar']}>
@@ -29,7 +37,13 @@ export default function Header(): JSX.Element {
           quality={50}
         />
 
-        <ul className={styles.list}>
+        <div className={styles.hambuguer} onClick={handleMenu}>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+
+        <ul className={`${styles.list} ${isMenuOpen && styles['menu-open']}`}>
           <li>
             <Link href='#'>Masculino</Link>
           </li>
