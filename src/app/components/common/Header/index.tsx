@@ -1,5 +1,6 @@
 'use client';
 
+import {X} from '@phosphor-icons/react';
 import Image from 'next/image';
 import Link from 'next/link';
 import {JSX, useState} from 'react';
@@ -12,11 +13,7 @@ import styles from './styles.module.css';
  * @return {JSX.Element} JSX element representing the header.
  */
 export default function Header(): JSX.Element {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  const handleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
+  const [isCategoriesMenuOpen, setIsCategoriesMenuOpen] = useState(false);
 
   return (
     <header className={styles.container}>
@@ -37,13 +34,32 @@ export default function Header(): JSX.Element {
           quality={50}
         />
 
-        <div className={styles.hambuguer} onClick={handleMenu}>
+        <div
+          className={`
+            ${styles.hamburger}
+            ${isCategoriesMenuOpen ? styles.hidden : ''}
+        `}
+          onClick={() => setIsCategoriesMenuOpen(true)}
+        >
           <div></div>
           <div></div>
           <div></div>
         </div>
 
-        <ul className={`${styles.list} ${isMenuOpen && styles['menu-open']}`}>
+        <button
+          className={`
+                ${styles['close-categoieries-button']} 
+                ${isCategoriesMenuOpen ? styles.visible : ''}
+            `}
+          onClick={() => setIsCategoriesMenuOpen(false)}>
+          <X size={24} />
+        </button>
+
+        <ul
+          className={`
+          ${styles.list} 
+          ${isCategoriesMenuOpen ? styles.open : ''}
+        `}>
           <li>
             <Link href='#'>Masculino</Link>
           </li>

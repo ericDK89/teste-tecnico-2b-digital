@@ -14,6 +14,6 @@
     text-transform: var(--unnamed-text-transform-uppercase);
 }
 
-.container[data-isOffer] {
+.container[data-isoffer] {
     background-color: var(--rosa-2b-dark);
 }

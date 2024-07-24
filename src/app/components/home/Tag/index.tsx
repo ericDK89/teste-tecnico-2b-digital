@@ -16,7 +16,7 @@ export default function Tag({children, isOffer}: TagProps): JSX.Element {
   return (
     <li
       className={styles.container}
-      data-isOffer={isOffer}>
+      data-isoffer={isOffer}>
       <p>{children}</p>
     </li>
   );

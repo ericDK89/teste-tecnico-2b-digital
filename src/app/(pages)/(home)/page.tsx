@@ -133,7 +133,9 @@ export default async function Home(): Promise<JSX.Element> {
         <main className={styles.container}>
           <Showcase products={releases} title='Lançamentos' />
           <Showcase products={bestSales} title='Os Mais Vendidos' />
-          <Banners />
+          <div className={styles['banner-box']}>
+            <Banners />
+          </div>
           <Showcase products={unmissableOffers} title='Ofertas Imperdíveis' />
         </main>
       </div>

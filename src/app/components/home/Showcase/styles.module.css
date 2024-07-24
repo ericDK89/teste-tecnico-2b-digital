@@ -11,6 +11,7 @@
     color: var(--azul-universe-darkest);
     line-height: var(--unnamed-line-spacing-29);
     text-transform: var(--unnamed-text-transform-uppercase);
+    text-align: center;
 }
 
 .context {
@@ -19,4 +20,12 @@
     justify-content: space-between;
     gap: 2.5rem;
     margin-top: 2.25rem;
+}
+
+@media (max-width: 600px) {
+    .context {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
 }
