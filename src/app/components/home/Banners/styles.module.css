@@ -1,6 +1,7 @@
 .container {
     display: flex;
     justify-content: space-evenly;
+    gap: 2.5rem;
     margin: 4.375rem 0;
 }
 

@@ -5,6 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import {JSX, useState} from 'react';
 import Circle from '../../home/Circle';
+import Cart from '../Cart';
 import styles from './styles.module.css';
 
 /**
@@ -14,6 +15,11 @@ import styles from './styles.module.css';
  */
 export default function Header(): JSX.Element {
   const [isCategoriesMenuOpen, setIsCategoriesMenuOpen] = useState(false);
+  const [isCartOpen, setIsCartOpne] = useState(false);
+
+  const handleCloseCart = () => {
+    setIsCartOpne(false);
+  };
 
   return (
     <header className={styles.container}>
@@ -78,12 +84,15 @@ export default function Header(): JSX.Element {
           <li>
             <Link href='#'>Acessórios</Link>
           </li>
-          <li className={styles.offers}>
+          <li>
             <Link href='#'>Ofertas</Link>
           </li>
         </ul>
 
-        <div className={styles.cart}>
+        <div
+          className={styles.cart}
+          onClick={() => setIsCartOpne(true)}
+        >
           <Image
             src='/images/icons/cart.png'
             alt='Carrinho'
@@ -94,6 +103,8 @@ export default function Header(): JSX.Element {
           <Circle amount={0} />
         </div>
       </nav>
+
+      <Cart isCartOpen={isCartOpen} handleCloseCart={handleCloseCart}/>
     </header>
   );
 }
