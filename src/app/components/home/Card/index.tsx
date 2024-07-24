@@ -11,6 +11,7 @@ type CardProps = {
     numberOfInstallments?: number;
     installmentPrice?: number;
     promotionOffer?: number;
+    sizes: string[],
     images: {
         showcase: string;
         productPage: string;
@@ -32,9 +33,8 @@ export default function Card({
   installmentPrice,
   images,
   promotionOffer,
+  sizes,
 }: CardProps): JSX.Element {
-  console.log(images.showcase);
-
   return (
     <div className={styles.container}>
       <ul className={styles.list}>
@@ -50,17 +50,30 @@ export default function Card({
         title={title}
         width={275}
         height={275}
+        className={styles.image}
       />
 
+      <ul className={styles.sizes}>
+        {sizes.map((size: string) => {
+          return <li key={size}>{size}</li>;
+        })}
+      </ul>
+
       <h3 className={styles.title}>{title}</h3>
+
       <div className={styles['price-box']}>
         {oldPrice && <span className={styles['old-price']}>{oldPrice}</span>}
         <strong className={styles.price}>{price}</strong>
       </div>
+
       <p className={styles.installments}>
         Em até {numberOfInstallments}x de
         <span> {installmentPrice}</span>
       </p>
+
+      <div className={styles['buy-box']}>
+        <button className={styles['buy-button']} type='button'>Comprar</button>
+      </div>
     </div>
   );
 }

@@ -8,6 +8,13 @@
                 "showcase": "/images/products/showcase/T-Shirt-Preta.png",
                 "productPage": "/images/products/product-page/T-Shirt-Preta.png"
             },
+            "sizes": [
+                "P",
+                "M",
+                "G",
+                "GG",
+                "XG"
+            ],
             "promotionOffer": 30,
             "oldPrice": 152,
             "numberOfInstallments": 3,
@@ -27,6 +34,13 @@
                 "showcase": "/images/products/showcase/Blusa-Moleton.png",
                 "productPage": "/images/products/product-page/Blusa-Moleton.png"
             },
+            "sizes": [
+                "P",
+                "M",
+                "G",
+                "GG",
+                "XG"
+            ],
             "promotionOffer": null,
             "oldPrice": null,
             "numberOfInstallments": 6,
@@ -45,6 +59,13 @@
                 "showcase": "/images/products/showcase/Vans.png",
                 "productPage": "/images/products/product-page/Vans.png"
             },
+            "sizes": [
+                "P",
+                "M",
+                "G",
+                "GG",
+                "XG"
+            ],
             "promotionOffer": null,
             "oldPrice": null,
             "numberOfInstallments": 6,
@@ -61,6 +82,13 @@
                 "showcase": "/images/products/showcase/EcoBag.png",
                 "productPage": "/images/products/product-page/EcoBag.png"
             },
+            "sizes": [
+                "P",
+                "M",
+                "G",
+                "GG",
+                "XG"
+            ],
             "promotionOffer": null,
             "oldPrice": null,
             "numberOfInstallments": 2,
@@ -79,6 +107,9 @@
                 "showcase": "/images/products/showcase/Garrafa.png",
                 "productPage": "/images/products/product-page/Garrafa.png"
             },
+            "sizes": [
+                "U"
+            ],
             "promotionOffer": null,
             "oldPrice": null,
             "numberOfInstallments": 2,
@@ -95,6 +126,13 @@
                 "showcase": "/images/products/showcase/T-Shirt-Rosa.png",
                 "productPage": "/images/products/product-page/T-Shirt-Rosa.png"
             },
+            "sizes": [
+                "P",
+                "M",
+                "G",
+                "GG",
+                "XG"
+            ],
             "promotionOffer": 30,
             "oldPrice": 152,
             "numberOfInstallments": 3,
@@ -111,6 +149,9 @@
                 "showcase": "/images/products/showcase/Caneca.png",
                 "productPage": "/images/products/product-page/Caneca.png"
             },
+            "sizes": [
+                "U"
+            ],
             "promotionOffer": null,
             "oldPrice": null,
             "numberOfInstallments": 2,
@@ -127,6 +168,9 @@
                 "showcase": "/images/products/showcase/Bottons.png",
                 "productPage": "/images/products/product-page/Bottons.png"
             },
+            "sizes": [
+                "U"
+            ],
             "promotionOffer": null,
             "oldPrice": null,
             "numberOfInstallments": null,
@@ -143,6 +187,13 @@
                 "showcase": "/images/products/showcase/T-Shirt-Preta.png",
                 "productPage": "/images/products/product-page/T-Shirt-Preta.png"
             },
+            "sizes": [
+                "P",
+                "M",
+                "G",
+                "GG",
+                "XG"
+            ],
             "promotionOffer": 30,
             "oldPrice": 152,
             "numberOfInstallments": 3,
@@ -162,6 +213,13 @@
                 "showcase": "/images/products/showcase/T-Shirt-Preta.png",
                 "productPage": "/images/products/product-page/T-Shirt-Preta.png"
             },
+            "sizes": [
+                "P",
+                "M",
+                "G",
+                "GG",
+                "XG"
+            ],
             "promotionOffer": 30,
             "oldPrice": 152,
             "numberOfInstallments": 3,
@@ -181,6 +239,13 @@
                 "showcase": "/images/products/showcase/T-Shirt-Preta.png",
                 "productPage": "/images/products/product-page/T-Shirt-Preta.png"
             },
+            "sizes": [
+                "P",
+                "M",
+                "G",
+                "GG",
+                "XG"
+            ],
             "promotionOffer": 30,
             "oldPrice": 152,
             "numberOfInstallments": 3,
@@ -200,6 +265,13 @@
                 "showcase": "/images/products/showcase/T-Shirt-Preta.png",
                 "productPage": "/images/products/product-page/T-Shirt-Preta.png"
             },
+            "sizes": [
+                "P",
+                "M",
+                "G",
+                "GG",
+                "XG"
+            ],
             "promotionOffer": 30,
             "oldPrice": 152,
             "numberOfInstallments": 3,

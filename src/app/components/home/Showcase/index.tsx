@@ -35,6 +35,7 @@ export default function Showcase({
               numberOfInstallments={product.numberOfInstallments}
               oldPrice={product.oldPrice}
               promotionOffer={product.promotionOffer}
+              sizes={product.sizes}
             />
           );
         })}

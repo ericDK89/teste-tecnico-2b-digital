@@ -1,9 +1,27 @@
 .container {
+    max-width: 275px;
+    width: 100%;
+    height: max-content;
+    padding-bottom: 1rem;
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.container:hover {
+    background-color: var(--rosa-2b-lightest);
+    border-radius: 24px;
+}
+
+.image {
+    transition: all 0.3s ease;
+}
+
+.container:hover .image {
+    transform: scale(0.85);
 }
 
 .list {
@@ -13,7 +31,45 @@
     gap: 0.25rem;
     font-weight: 800;
     position: absolute;
-    top: -5px;
+    top: 5px;
+}
+
+.sizes {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    position: absolute;
+    top: 250px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.sizes li {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--unnamed-font-size-12);
+    font-weight: var(--unnamed-font-weight-bold);
+    color: var(--rosa-2b-dark);
+    background-color: var(--neutral-lightest);
+    border: 1px solid var(--rosa-2b-light);
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.sizes li:hover {
+    border: 1px solid var(--rosa-2b-dark);
+}
+
+.container:hover .sizes {
+    opacity: 1;
+    visibility: visible;
 }
 
 .title {
@@ -22,6 +78,7 @@
     letter-spacing: var(--unnamed-character-spacing-0-7);
     line-height: 1rem;
     text-align: center;
+    margin-top: 0.5rem;
     margin-bottom: 0.625rem;
 }
 
@@ -56,4 +113,30 @@
 .installments span {
     color: var(--rosa-2b-dark);
     font-weight: var(--unnamed-font-weight-bold);
+}
+
+.buy-box {
+    display: inline-block;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.container:hover .buy-box {
+    opacity: 1;
+    visibility: visible;
+}
+
+.buy-button {
+    margin-top: 1rem;
+    padding: 0.75rem 2.5rem;
+    font-weight: 600;
+    color: var(--neutral-lightest);
+    letter-spacing: var(--unnamed-character-spacing-0-6);
+    font-size: var(--unnamed-font-size-12);
+    background-color: var(--rosa-2b-dark);
+    border: none;
+    border-radius: 24px;
+    text-transform: var(--unnamed-text-transform-uppercase);
+    cursor: pointer;
 }

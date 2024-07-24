@@ -22,7 +22,8 @@ export type Product = {
     installmentPrice?: number,
     category: 'unmissableOffers' | 'bestSales' | 'releases',
     categoryId: 1 | 2 | 3,
-    tags: string[]
+    tags: string[],
+    sizes: string[],
 }
 
 /**
@@ -64,6 +65,7 @@ export default async function Home(): Promise<JSX.Element> {
           category: product.category,
           categoryId: product.categoryId,
           tags: product.tags,
+          sizes: product.sizes,
         };
       });
 
@@ -86,6 +88,7 @@ export default async function Home(): Promise<JSX.Element> {
           category: product.category,
           categoryId: product.categoryId,
           tags: product.tags,
+          sizes: product.sizes,
         };
       });
 
@@ -108,6 +111,7 @@ export default async function Home(): Promise<JSX.Element> {
           category: product.category,
           categoryId: product.categoryId,
           tags: product.tags,
+          sizes: product.sizes,
         };
       });
 
