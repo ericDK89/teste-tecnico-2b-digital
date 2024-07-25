@@ -6,7 +6,7 @@
 export async function GET(request: Request, {params}: any): Promise<Response> {
   const {id} = params;
 
-  const res = await fetch(`https://teste-tecnico-2b-digital-ldiq-git-main-ericdk89s-projects.vercel.app/products/${id}`, {
+  const res = await fetch(`https://teste-tecnico-2b-digital-ldiq-jna5wr382-ericdk89s-projects.vercel.app/products/${id}`, {
     method: 'GET',
     next: {
       revalidate: 24 * 60 * 60,
