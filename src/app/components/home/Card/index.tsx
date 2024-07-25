@@ -1,9 +1,9 @@
 'use client';
 
-import { createSlug } from '@/app/utils/createSlug';
+import {createSlug} from '@/app/utils/createSlug';
 import Image from 'next/image';
-import { useRouter } from 'next/navigation';
-import { JSX } from 'react';
+import {useRouter} from 'next/navigation';
+import {JSX} from 'react';
 import Tag from '../Tag';
 import styles from './styles.module.css';
 
