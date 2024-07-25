@@ -22,6 +22,7 @@ export default async function Showcase(): Promise<JSX.Element> {
       'Access-Control-Allow-Headers': 'Content-Type, Authorization',
       'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
       'Access-Control-Allow-Credentials': 'true',
+      'Access-Control-Request-Headers': 'access-control-allow-origin',
     },
   });
 
