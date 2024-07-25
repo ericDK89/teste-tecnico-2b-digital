@@ -17,7 +17,7 @@
         },
         {
             "src": "/(.*)",
-            "dest": "/.next/server/pages/$1"
+            "dest": "/$1"
         }
     ]
 }
