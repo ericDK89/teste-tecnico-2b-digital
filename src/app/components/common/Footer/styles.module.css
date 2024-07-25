@@ -9,6 +9,13 @@
     background-color: var(--azul-universe-lightest);
 }
 
+@media (max-width: 600px) {
+    .container {
+        flex-direction: column;
+        padding: 1rem 0;
+    }
+}
+
 .agency {
     margin-bottom: 0.625rem;
     font-size: var(--unnamed-font-size-12);
