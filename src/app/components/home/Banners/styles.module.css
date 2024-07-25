@@ -1,0 +1,19 @@
+.container {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 2.5rem;
+    margin: 4.375rem 0;
+}
+
+@media (max-width: 600px) {
+    .container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .container img {
+        width: 220px;
+        height: auto;
+    }
+}

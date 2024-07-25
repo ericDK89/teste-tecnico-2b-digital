@@ -1,0 +1,91 @@
+:root {
+    /* Colors: */
+    --azul-universe-lightest: #F8F7FC;
+    --azul-universe-light: #D9D8E6;
+    --azul-universe-medium: #8580AB;
+    --azul-universe-dark: #545073;
+    --azul-universe-darkest: #110D2F;
+    --rosa-2b-lightest: #FFF7FA;
+    --rosa-2b-light: #FFE8F1;
+    --rosa-2b-medium: #FFCCD8;
+    --rosa-2b-dark: #E8335D;
+    --rosa-2b-darkest: #CC2D52;
+    --neutral-darkest: #262626;
+    --neutral-dark: #7A7A7A;
+    --neutral-medium: #E0E0E0;
+    --neutral-light: #F5F5F5;
+    --neutral-lightest: #FFFFFF;
+    --aux-amarelo: #DEBF10;
+    --aux-vermelho: #DD4F44;
+    --aux-verde: #57D979;
+    --aux-azul: #26A5FF;
+    --unnamed-color-4040ff: #4040FF;
+    --unnamed-color-000000: #000000;
+    --unnamed-color-cccccc: #CCCCCC;
+
+    /* Font/text values */
+    --unnamed-font-family-urbanist: Urbanist;
+    --unnamed-font-style-normal: normal;
+    --unnamed-font-weight-medium: medium;
+    --unnamed-font-weight-bold: bold;
+    --unnamed-font-weight-normal: normal;
+    --unnamed-font-size-8: 8px;
+    --unnamed-font-size-10: 10px;
+    --unnamed-font-size-12: 12px;
+    --unnamed-font-size-14: 14px;
+    --unnamed-font-size-16: 16px;
+    --unnamed-font-size-18: 18px;
+    --unnamed-font-size-20: 20px;
+    --unnamed-font-size-24: 24px;
+    --unnamed-font-size-34: 34px;
+    --unnamed-font-size-48: 48px;
+    --unnamed-font-size-56: 56px;
+    --unnamed-font-size-72: 72px;
+    --unnamed-character-spacing-0: 0px;
+    --unnamed-character-spacing-1: 1px;
+    --unnamed-character-spacing-0-8: 0.8px;
+    --unnamed-character-spacing-0-6: 0.6px;
+    --unnamed-character-spacing-1-08: 1.08px;
+    --unnamed-character-spacing-1-2: 1.2px;
+    --unnamed-character-spacing-0-7: 0.7px;
+    --unnamed-character-spacing-0-9: 0.9px;
+    --unnamed-character-spacing-1-7: 1.7px;
+    --unnamed-line-spacing-10: 10px;
+    --unnamed-line-spacing-12: 12px;
+    --unnamed-line-spacing-14: 14px;
+    --unnamed-line-spacing-19: 19px;
+    --unnamed-line-spacing-21: 21px;
+    --unnamed-line-spacing-22: 22px;
+    --unnamed-line-spacing-24: 24px;
+    --unnamed-line-spacing-29: 29px;
+    --unnamed-line-spacing-41: 41px;
+    --unnamed-line-spacing-58: 58px;
+    --unnamed-line-spacing-67: 67px;
+    --unnamed-line-spacing-86: 86px;
+    --unnamed-text-transform-uppercase: uppercase;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    min-width: 0;
+}
+
+html,
+body {
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+
+body {
+    font-size: var(--unnamed-font-size-16);
+    line-height: var(--unnamed-line-spacing-24);
+    letter-spacing: var(--unnamed-character-spacing-0-8);
+    background-color: var(--neutral-lightest)
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}

@@ -1,0 +1,40 @@
+.container {
+    width: 100%;
+    height: 160px;
+    margin-top: 5rem;
+    padding: 0 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--azul-universe-lightest);
+}
+
+@media (max-width: 600px) {
+    .container {
+        flex-direction: column;
+        padding: 1rem 0;
+    }
+}
+
+.agency {
+    margin-bottom: 0.625rem;
+    font-size: var(--unnamed-font-size-12);
+    font-weight: 600;
+    line-height: 14px;
+    letter-spacing: var(--unnamed-character-spacing-0-6);
+    text-transform: var(--unnamed-text-transform-uppercase);
+    color: var(--azul-universe-darkest);
+}
+
+.address,
+.about {
+    font-size: var(--unnamed-font-size-12);
+    font-weight: 500;
+    color: var(--azul-universe-darkest);
+    letter-spacing: var(--unnamed-character-spacing-0-6);
+    line-height: 14px;
+}
+
+.address {
+    margin-bottom: 0.25rem;
+}
