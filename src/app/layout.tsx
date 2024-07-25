@@ -1,10 +1,10 @@
 import type {Metadata} from 'next';
-// import {Urbanist} from 'next/font/google';
+import {Urbanist} from 'next/font/google';
 import {JSX, ReactNode} from 'react';
 import './styles/globals.css';
 
 // eslint-disable-next-line new-cap
-// const urbanist = Urbanist({subsets: ['latin']});
+const urbanist = Urbanist({subsets: ['latin']});
 
 export const metadata: Metadata = {
   title: '2bStore',
@@ -25,7 +25,7 @@ export default function RootLayout({
 }>): JSX.Element {
   return (
     <html lang="pt-br">
-      <body>
+      <body className={urbanist.className}>
         {children}
       </body>
     </html>
