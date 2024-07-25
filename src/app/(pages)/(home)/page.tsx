@@ -1,11 +1,11 @@
 'use server';
 
-import bannerPrincipal from '@/app/assets/banners/banner-principal.png';
 import Banners from '@/app/components/home/Banners';
 import Showcase from '@/app/components/home/Showcase';
 import {brl} from '@/app/utils/currency';
 import Image from 'next/image';
 import {JSX} from 'react';
+
 import styles from './styles.module.css';
 
 export type Product = {
@@ -128,10 +128,11 @@ export default async function Home(): Promise<JSX.Element> {
           <Image
             // * necessário importar de forma estática pelo 'assets'
             // * para definir o width e height de forma responsiva
-            src={bannerPrincipal}
+            src='/images/banners/bannerPrincipal.png'
             alt='2bStore'
             title='2bStore'
-            style={{width: '100%', height: 'auto'}}
+            width={1920}
+            height={550}
           />
         </div>
 
