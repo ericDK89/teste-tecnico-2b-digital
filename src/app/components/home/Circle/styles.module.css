@@ -1,0 +1,15 @@
+.circle {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: var(--rosa-2b-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--neutral-lightest);
+    font-size: var(--unnamed-font-size-10);
+    font-weight: var(--unnamed-font-weight-bold);
+    position: relative;
+    top: 0px;
+    right: 0px;
+}
