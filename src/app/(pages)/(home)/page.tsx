@@ -1,5 +1,6 @@
 'use server';
 
+import bannerPrincipal from '@/app/assets/banners/bannerPrincipal.png';
 import Banners from '@/app/components/home/Banners';
 import Showcase from '@/app/components/home/Showcase';
 import {brl} from '@/app/utils/currency';
@@ -128,11 +129,10 @@ export default async function Home(): Promise<JSX.Element> {
           <Image
             // * necessário importar de forma estática pelo 'assets'
             // * para definir o width e height de forma responsiva
-            src='/images/banners/bannerPrincipal.png'
+            src={bannerPrincipal}
             alt='2bStore'
             title='2bStore'
-            width={1920}
-            height={550}
+            style={{width: '100%', height: 'auto'}}
           />
         </div>
 
