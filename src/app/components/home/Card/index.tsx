@@ -53,6 +53,8 @@ export default function Card({
 
       const data = await res.json();
       localStorage.setItem('product', JSON.stringify(data));
+      console.log(data);
+      console.log('slug', createSlug(data.name));
       router.push(`/${createSlug(data.name)}`);
     } catch (error) {
       console.error('Error:', error);
