@@ -9,7 +9,7 @@ import styles from './styles.module.css';
  * @return {JSX.Element} representing the Showcase component.
  */
 export default async function Showcase(): Promise<JSX.Element> {
-  const res = await fetch('http://localhost:5432/products', {
+  const res = await fetch('https://teste-tecnico-2b-digital-ldiq-git-main-ericdk89s-projects.vercel.app/products', {
     method: 'GET',
     next: {
       revalidate: 1, // 24 hours

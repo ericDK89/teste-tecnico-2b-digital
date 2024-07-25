@@ -32,7 +32,7 @@ export type Product = {
  * @return {JSX.Element} The rendered Home component.
  */
 export default async function Home(): Promise<JSX.Element> {
-  const res = await fetch('http://localhost:5432/products', {
+  const res = await fetch('https://teste-tecnico-2b-digital-ldiq-git-main-ericdk89s-projects.vercel.app/products', {
     method: 'GET',
     next: {
       revalidate: 1, // 24 hours
