@@ -18,6 +18,7 @@ export default async function Showcase(): Promise<JSX.Element> {
     headers: {
       'Content-Type': 'application/json',
       'Accept': 'application/json',
+      'Access-Control-Allow-Origin': '*',
     },
   });
 

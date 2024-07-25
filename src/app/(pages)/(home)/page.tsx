@@ -41,6 +41,7 @@ export default async function Home(): Promise<JSX.Element> {
     headers: {
       'Content-Type': 'application/json',
       'Accept': 'application/json',
+      'Access-Control-Allow-Origin': '*',
     },
   });
 

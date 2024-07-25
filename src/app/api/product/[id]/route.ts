@@ -13,6 +13,7 @@ export async function GET(request: Request, {params}: any): Promise<Response> {
     headers: {
       'Content-Type': 'application/json',
       'Accept': 'application/json',
+      'Access-Control-Allow-Origin': '*',
     },
   });
 
