@@ -34,6 +34,8 @@ export default function Product(): JSX.Element {
     addToCart(data);
   };
 
+  console.log(data);
+
   return (
     <>
       <main className={styles.container}>
