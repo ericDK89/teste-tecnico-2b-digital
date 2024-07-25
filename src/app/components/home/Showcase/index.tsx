@@ -27,6 +27,7 @@ export default function Showcase({
           return (
             <Card
               key={product.id}
+              id={product.id}
               images={product.images}
               installmentPrice={product.installmentPrice}
               price={product.price}

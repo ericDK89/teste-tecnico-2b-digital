@@ -1,8 +1,6 @@
 import type {Metadata} from 'next';
 import {Urbanist} from 'next/font/google';
 import {JSX, ReactNode} from 'react';
-import Footer from './components/common/Footer';
-import Header from './components/common/Header';
 import './styles/globals.css';
 
 // eslint-disable-next-line new-cap
@@ -28,9 +26,7 @@ export default function RootLayout({
   return (
     <html lang="pt-br">
       <body className={urbanist.className}>
-        <Header />
         {children}
-        <Footer />
       </body>
     </html>
   );

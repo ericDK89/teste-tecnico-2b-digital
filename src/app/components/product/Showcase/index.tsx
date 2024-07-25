@@ -55,6 +55,7 @@ export default async function Showcase(): Promise<JSX.Element> {
           return (
             <Card
               key={product.id}
+              id={product.id}
               images={product.images}
               installmentPrice={product.installmentPrice}
               price={product.price}

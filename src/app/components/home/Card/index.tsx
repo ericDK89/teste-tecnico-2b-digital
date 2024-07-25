@@ -1,9 +1,14 @@
+'use client';
+
+import {createSlug} from '@/app/utils/createSlug';
 import Image from 'next/image';
+import {useRouter} from 'next/navigation';
 import {JSX} from 'react';
 import Tag from '../Tag';
 import styles from './styles.module.css';
 
 type CardProps = {
+    id: number;
     tags: string[];
     title: string;
     oldPrice?: number;
@@ -25,6 +30,7 @@ type CardProps = {
  * @return {JSX.Element} The rendered Card component.
  */
 export default function Card({
+  id,
   tags,
   title,
   oldPrice,
@@ -35,8 +41,26 @@ export default function Card({
   promotionOffer,
   sizes,
 }: CardProps): JSX.Element {
+  const router = useRouter();
+
+  const handleGoToProduct = async () => {
+    try {
+      const res = await fetch(`http://localhost:3000/api/product/${id}`);
+
+      if (!res.ok) {
+        throw new Error('Network response was not ok');
+      }
+
+      const data = await res.json();
+      localStorage.setItem('product', JSON.stringify(data));
+      router.push(`/${createSlug(data.data.name)}`);
+    } catch (error) {
+      console.error('Error:', error);
+    }
+  };
+
   return (
-    <div className={styles.container}>
+    <div className={styles.container} onClick={handleGoToProduct}>
       <ul className={styles.list}>
         {promotionOffer && <Tag isOffer>{promotionOffer}%</Tag>}
         {tags.map((tag: string) => {
@@ -72,7 +96,9 @@ export default function Card({
       </p>
 
       <div className={styles['buy-box']}>
-        <button className={styles['buy-button']} type='button'>Comprar</button>
+        <button className={styles['buy-button']} type='button'>
+            Comprar
+        </button>
       </div>
     </div>
   );

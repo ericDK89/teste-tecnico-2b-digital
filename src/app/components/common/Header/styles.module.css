@@ -29,6 +29,10 @@
     padding: 0 1rem;
 }
 
+.logo {
+    cursor: pointer;
+}
+
 .hamburger {
     display: none;
     cursor: pointer;

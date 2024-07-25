@@ -3,9 +3,10 @@
 import {X} from '@phosphor-icons/react';
 import Image from 'next/image';
 import Link from 'next/link';
+import {useRouter} from 'next/navigation';
 import {JSX, useState} from 'react';
-import Circle from '../../home/Circle';
 import Cart from '../Cart';
+import Circle from './Circle';
 import styles from './styles.module.css';
 
 /**
@@ -15,10 +16,12 @@ import styles from './styles.module.css';
  */
 export default function Header(): JSX.Element {
   const [isCategoriesMenuOpen, setIsCategoriesMenuOpen] = useState(false);
-  const [isCartOpen, setIsCartOpne] = useState(false);
+  const [isCartOpen, setIsCartOpen] = useState(false);
+
+  const router = useRouter();
 
   const handleCloseCart = () => {
-    setIsCartOpne(false);
+    setIsCartOpen(false);
   };
 
   return (
@@ -38,6 +41,8 @@ export default function Header(): JSX.Element {
           alt='2bStore'
           title='2bStore'
           quality={50}
+          onClick={() => router.push('/')}
+          className={styles.logo}
         />
 
         <div
@@ -91,7 +96,7 @@ export default function Header(): JSX.Element {
 
         <div
           className={styles.cart}
-          onClick={() => setIsCartOpne(true)}
+          onClick={() => setIsCartOpen(true)}
         >
           <Image
             src='/images/icons/cart.png'
@@ -100,7 +105,7 @@ export default function Header(): JSX.Element {
             width={19}
             height={24}
           />
-          <Circle amount={0} />
+          <Circle />
         </div>
       </nav>
 
