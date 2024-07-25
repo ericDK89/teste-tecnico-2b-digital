@@ -8,6 +8,8 @@ type CartContextProps = {
     clearCart: () => void,
     increaseQuantity: (productId: string) => void,
     decreaseQuantity: (productId: string) => void,
+    handleSetProduct: (product: ProductProps) => void,
+    product: ProductProps,
 }
 
 export type ProductProps = {
@@ -32,7 +34,12 @@ export type ProductProps = {
 export const CartContext = createContext({} as CartContextProps);
 
 export const CartProvider = ({children}: {children: ReactNode}) => {
+  const [product, setProduct] = useState({} as ProductProps);
   const [cart, setCart] = useState<ProductProps[]>([]);
+
+  const handleSetProduct = (product: ProductProps) => {
+    setProduct(product);
+  };
 
   const addToCart = (product: ProductProps) => {
     setCart((prevCart) => {
@@ -86,6 +93,8 @@ export const CartProvider = ({children}: {children: ReactNode}) => {
       clearCart,
       decreaseQuantity,
       increaseQuantity,
+      handleSetProduct,
+      product,
     }}>
       {children}
     </CartContext.Provider>

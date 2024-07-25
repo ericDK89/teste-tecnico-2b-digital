@@ -1,7 +1,7 @@
 'use client';
 
 import Description from '@/app/components/product/Description';
-import {ProductProps} from '@/app/context/CartContext';
+// import {ProductProps} from '@/app/context/CartContext';
 import {useCart} from '@/app/hooks/useCart';
 import {brl} from '@/app/utils/currency';
 import Image from 'next/image';
@@ -9,9 +9,9 @@ import {useRouter} from 'next/navigation';
 import {JSX} from 'react';
 import styles from './styles.module.css';
 
-type IProduct = {
-    data: ProductProps
-}
+// type IProduct = {
+//     product: ProductProps
+// }
 
 /**
  * Renders a product component.
@@ -20,21 +20,19 @@ type IProduct = {
  */
 export default function Product(): JSX.Element {
   const router = useRouter();
+  const {product} = useCart();
 
-  const item = localStorage.getItem('product') ?? null;
-  const {data}: IProduct = item ? JSON.parse(item) : null;
-
-  if (!data) {
+  if (!product) {
     router.push('/');
   }
 
   const {addToCart} = useCart();
 
   const handleAddProduct = () => {
-    addToCart(data);
+    addToCart(product);
   };
 
-  console.log(data);
+  console.log(product);
 
   return (
     <>
@@ -44,8 +42,8 @@ export default function Product(): JSX.Element {
             <ul className={styles['list-images']}>
               <li>
                 <Image
-                  src={data.images.showcase}
-                  alt={data.name}
+                  src={product.images.showcase}
+                  alt={product.name}
                   width={64}
                   height={64}
                   quality={50}
@@ -54,8 +52,8 @@ export default function Product(): JSX.Element {
 
               <li>
                 <Image
-                  src={data.images.showcase}
-                  alt={data.name}
+                  src={product.images.showcase}
+                  alt={product.name}
                   width={64}
                   height={64}
                   quality={50}
@@ -64,8 +62,8 @@ export default function Product(): JSX.Element {
 
               <li>
                 <Image
-                  src={data.images.showcase}
-                  alt={data.name}
+                  src={product.images.showcase}
+                  alt={product.name}
                   width={64}
                   height={64}
                   quality={50}
@@ -75,9 +73,9 @@ export default function Product(): JSX.Element {
           </div>
 
           <Image
-            src={data.images.productPage}
-            alt={data.name}
-            title={data.name}
+            src={product.images.productPage}
+            alt={product.name}
+            title={product.name}
             width={500}
             height={500}
             quality={100}
@@ -86,19 +84,21 @@ export default function Product(): JSX.Element {
 
         <aside className={styles.context}>
           <div className={styles.about}>
-            <h1>{data.name}</h1>
+            <h1>{product.name}</h1>
             <p>Ref.: 2B2022TIB</p>
           </div>
 
           <div className={styles['price-box']}>
-            {data.promotionOffer && (
-              <span className={styles['old-price']}>{brl(data.oldPrice)}</span>
+            {product.promotionOffer && (
+              <span className={styles['old-price']}>
+                {brl(product.oldPrice)}
+              </span>
             )}
-            <p className={styles.price}>{brl(data.price)}</p>
-            {data.installmentPrice && (
+            <p className={styles.price}>{brl(product.price)}</p>
+            {product.installmentPrice && (
               <p className={styles.installment}>
-                Em até {data.numberOfInstallments}x de
-                <span> {brl(data.installmentPrice)}</span>
+                Em até {product.numberOfInstallments}x de
+                <span> {brl(product.installmentPrice)}</span>
               </p>
             )}
           </div>
@@ -111,7 +111,7 @@ export default function Product(): JSX.Element {
 
             <div className={styles['size-options']}>
               <ul>
-                {data.sizes.map((size: string) => {
+                {product.sizes.map((size: string) => {
                   return (
                     <li key={size}>
                       <button>{size}</button>
@@ -146,7 +146,7 @@ export default function Product(): JSX.Element {
 
             <div className={styles['freight-wrapper']}>
               <div className={styles['freight-box']}>
-                <div className={styles['freight-option']} data-option-one>
+                <div className={styles['freight-option']} product-option-one>
                   <p>Frete Expresse</p>
                   <span>2 à 6 dias</span>
                 </div>
@@ -155,7 +155,7 @@ export default function Product(): JSX.Element {
               </div>
 
               <div className={styles['freight-box']}>
-                <div className={styles['freight-option']} data-option-two>
+                <div className={styles['freight-option']} product-option-two>
                   <p>Normal</p>
                   <span>4 à 15 dias</span>
                 </div>

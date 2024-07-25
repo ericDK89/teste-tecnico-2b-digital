@@ -1,5 +1,6 @@
 'use client';
 
+import {useCart} from '@/app/hooks/useCart';
 import {createSlug} from '@/app/utils/createSlug';
 import Image from 'next/image';
 import {useRouter} from 'next/navigation';
@@ -42,6 +43,7 @@ export default function Card({
   sizes,
 }: CardProps): JSX.Element {
   const router = useRouter();
+  const {handleSetProduct} = useCart();
 
   const handleGoToProduct = async () => {
     try {
@@ -53,8 +55,7 @@ export default function Card({
 
       const data = await res.json();
       localStorage.setItem('product', JSON.stringify(data));
-      console.log(data);
-      console.log('slug', createSlug(data.name));
+      handleSetProduct(data);
       router.push(`/${createSlug(data.name)}`);
     } catch (error) {
       console.error('Error:', error);
