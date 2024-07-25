@@ -1,9 +1,9 @@
 'use client';
 
-import {createSlug} from '@/app/utils/createSlug';
+import { createSlug } from '@/app/utils/createSlug';
 import Image from 'next/image';
-import {useRouter} from 'next/navigation';
-import {JSX} from 'react';
+import { useRouter } from 'next/navigation';
+import { JSX } from 'react';
 import Tag from '../Tag';
 import styles from './styles.module.css';
 
@@ -45,7 +45,7 @@ export default function Card({
 
   const handleGoToProduct = async () => {
     try {
-      const res = await fetch(`http://localhost:3000/api/product/${id}`);
+      const res = await fetch(`https://teste-tecnico-2b-digital-ldiq-jna5wr382-ericdk89s-projects.vercel.app/products/${id}`);
 
       if (!res.ok) {
         throw new Error('Network response was not ok');
