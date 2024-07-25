@@ -9,8 +9,6 @@ import styles from './styles.module.css';
  */
 export default function Circle(): JSX.Element {
   const {cart} = useCart();
-  console.log(cart.length);
-
 
   return <div className={styles.circle}>{cart.length}</div>;
 }

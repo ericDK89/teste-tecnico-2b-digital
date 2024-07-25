@@ -12,13 +12,16 @@ export default async function Showcase(): Promise<JSX.Element> {
   const res = await fetch('https://teste-tecnico-2b-digital-ldiq-git-main-ericdk89s-projects.vercel.app/products', {
     method: 'GET',
     next: {
-      revalidate: 1, // 24 hours
+      revalidate: 24 * 60 * 60, // 24 hours
       tags: ['products'],
     },
     headers: {
       'Content-Type': 'application/json',
       'Accept': 'application/json',
       'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Headers': 'Content-Type, Authorization',
+      'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
+      'Access-Control-Allow-Credentials': 'true',
     },
   });
 
